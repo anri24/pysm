@@ -2,10 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import UserLayout from "./users/layout/UserLayout";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
-import i18next from "i18next";
+// import i18next from "i18next";
 
-
-const lang = i18next.language;
+// const lang = i18next.language;
 
 const router = createBrowserRouter([
     {

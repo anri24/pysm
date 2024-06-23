@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { useStateContext } from "./context/ContextProvider";
 
 export default function App(){
-  // const {changeLanguage} = useStateContext()
   const [t, i18n] = useTranslation("global");
 
   function changeLanguage(lang){

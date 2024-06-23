@@ -5,7 +5,7 @@ import './index.css'
 import i18next from 'i18next'
 import global_en from './locale/en/global.json'
 import global_ar from './locale/ar/global.json'
-import { I18nextProvider, useTranslation } from 'react-i18next'
+import { I18nextProvider } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
 import router from './router.jsx'
 
