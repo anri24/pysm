@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import flag_en from './../../../public/images/locale-flags/en-flag.png'
-import flag_ar from './../../../public/images/locale-flags/ar-flag.png'
+import en_flag from './../../../public/images/locale-flags/en-flag.png'
+import ar_flag from './../../../public/images/locale-flags/ar-flag.png'
 import { useTranslation } from "react-i18next";
 
 function Header() {
@@ -11,20 +11,25 @@ function Header() {
     }
 
     return (
-        <div className="bg-[#00c492]">
-            <div className="flex justify-around w-[90%] mx-auto p-5 ">
-                    <div className="flex justify-between w-[90%]">
-                        <Link to='/register' className="">{t('header.register')}</Link>
-                        <Link to='/' className="">Logo</Link>
-                        <Link to='/login' className="">{t('header.login')}</Link>
-                    </div>
-                    <div className="w-[5%] flex justify-end gap-5">
-                    <button className="" onClick={() => changeLanguage('en')}><img src={flag_en} width='20px' /></button>
-                    <button className="" onClick={() => changeLanguage('ar')}><img src={flag_ar} width='20px' /></button>
-                    </div>
+        <div className="bg-[#00c492] text-white">
+            <div className="flex justify-around w-[90%] mx-auto p-5">
+                <div className="flex justify-around w-[90%]">
+                    <Link to='/register' className="">{t('header.register')}</Link>
+                    <Link to='/' className="">Logo</Link>
+                    <Link to='/login' className="">{t('header.login')}</Link>
+                </div>
+                <div className="w-[5%] flex justify-end gap-5">
+                    <button className="" onClick={() => changeLanguage('en')}><img src={en_flag} width='20px' /></button>
+                    <button className="" onClick={() => changeLanguage('ar')}><img src={ar_flag} width='20px' /></button>
+                </div>
             </div>
-            <div>
-
+            <div className="mx-auto p-5 border-t-[1px] border-t-[#00b083]">
+                <div className="w-[30%] mx-auto flex justify-around">
+                <div>technical support</div>
+                <div>blog</div>
+                <div>categories</div>
+                <Link to='/'>main</Link>
+                </div>
             </div>
         </div>
     )

@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 function Login() {
+
     return (
         <div>
-            login form
+            login 
         </div>
     )
 }
