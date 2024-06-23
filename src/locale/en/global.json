@@ -1,17 +1,19 @@
 {
     "header": {
-        "register": "registration",
-        "login": "login"
+        "technical_support": "technical support",
+        "blog": "blog",
+        "categories": "categories",
+        "main": "main"
+        
     },
     "auth": {
-        "name": "Name",
+        "name": "Full Name",
         "email": "Email",
         "password": "Password",
         "password_confirmation": "Confirm Password",
         "login": "Login",
         "register": "Registration",
-        "dont_have_account": "don't have an account?",
-        "have_account": "have an account?"
-
+        "have_account": "have an account?",
+        "dont_have_account": "don't have an account?"
     }
 }

@@ -1,17 +1,18 @@
 {
     "header": {
-        "register": "تسجيل",
-        "login": "تسجيل الدخول"
+        "technical_support": "دعم فني",
+        "blog": "مدونة",
+        "categories": "فئات",
+        "main": "رئيسي"
     },
     "auth": {
-        "name": "Name",
-        "email": "Email",
-        "password": "Password",
-        "password_confirmation": "Confirm Password",
-        "login": "Login",
-        "register": "Registration",
-        "dont_have_account": "don't have an account?",
-        "have_account": "have an account?"
-
+        "login": "تسجيل الدخول",
+        "register": "تسجيل",
+        "name": "الاسم الكامل",
+        "email": "بريد إلكتروني",
+        "password": "كلمة المرور",
+        "password_confirmation": "تأكيد كلمة المرور",
+        "have_account": "هل لديك حساب؟",
+        "dont_have_account": "لا تملك حساب؟"
     }
 }
