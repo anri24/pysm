@@ -5,7 +5,7 @@ function Register() {
 
     return (
         <form>
-            <div className="flex flex-col items-center mt-20 gap-5 text-center p-5 bg-slate-200 rounded w-96 mx-auto">
+            <div className="flex flex-col items-center mt-20 gap-5 text-center p-10 bg-slate-200 rounded w-96 mx-auto">
                 <h2 className="text-2xl underline uppercase">{t('auth.register')}</h2>
             <div className="flex flex-col gap-2 w-60">
                 <label htmlFor="name" className="capitalize">{t('auth.name')}</label>
