@@ -1,5 +1,4 @@
 function ServiceDetailItem({detail}) {
-    console.log(detail)
     return (
         <div className="mt-20 bg-[#f2f2f2] flex flex-col text-start">
             <div className="py-5 text-center rounded bg-black text-white">{detail.name}</div>

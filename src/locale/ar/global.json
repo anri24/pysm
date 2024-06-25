@@ -7,8 +7,9 @@
     },
     "auth": {
         "login": "تسجيل الدخول",
+        "logout": "Logout ar",
         "register": "تسجيل",
-        "name": "الاسم الكامل",
+        "name": "اسم المستخدم",
         "email": "بريد إلكتروني",
         "password": "كلمة المرور",
         "password_confirmation": "تأكيد كلمة المرور",

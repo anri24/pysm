@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import en_flag from './../../../public/images/locale-flags/en-flag.png'
 import ar_flag from './../../../public/images/locale-flags/ar-flag.png'
 import { useTranslation } from "react-i18next";
+import { useStateContext } from "../../context/ContextProvider";
+import axiosClient from "../../axios-client";
 
 function Header() {
     const [t, i18n] = useTranslation("global");
@@ -10,13 +12,26 @@ function Header() {
         i18n.changeLanguage(lang)
     }
 
+    const {user, token, setUser, setToken,setUserName} = useStateContext();
+
+    const onLogout = (e) => {
+        e.preventDefault()
+
+        axiosClient.post('/logout').then(() => {
+            setUser({});
+            setToken(null);
+            setUserName(null)
+        })
+    }
+
     return (
         <div className="bg-[#00c492] text-white">
             <div className="flex justify-around w-[90%] mx-auto p-5">
                 <div className="flex justify-around w-[90%]">
-                    <Link to='/register' className="">{t('auth.register')}</Link>
+                    {<Link to={`${!token && '/register'}`} onClick={token && onLogout} className="">{t(`${token ? 'auth.logout' : 'auth.register'}`)}</Link>}
                     <Link to='/' className="">Logo</Link>
-                    <Link to='/login' className="">{t('auth.login')}</Link>
+                    {!token && <Link to='/login' className="">{t('auth.login')}</Link>}
+                    {token && <div>{user.name}</div>}
                 </div>
                 <div className="w-[5%] flex justify-end gap-5">
                     <button className="" onClick={() => changeLanguage('en')}><img src={en_flag} width='20px' /></button>

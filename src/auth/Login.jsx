@@ -2,13 +2,15 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useStateContext } from "../context/ContextProvider";
 import axiosClient from "../axios-client";
+import { Navigate } from "react-router-dom";
 
 function Login() {
     const [t] = useTranslation("global");
-
+    const {token, setUser, setToken, setUserName} = useStateContext();
     const emailRef = useRef();
     const passwordRef = useRef();
-    const {setUser, setToken} = useStateContext();
+    
+    if(token) return <Navigate to='/' />
 
     const onLogin = (e) => {
         e.preventDefault();
@@ -21,6 +23,7 @@ function Login() {
         .then(({data}) => {
             setUser(data.user);
             setToken(data.token)
+            setUserName(data.user)
         })
     }
 

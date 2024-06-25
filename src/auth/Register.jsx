@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import axiosClient from "../axios-client";
 import { useStateContext } from "../context/ContextProvider";
+import { Navigate } from "react-router-dom";
 
 function Register() {
     const [t] = useTranslation("global");
@@ -10,7 +11,10 @@ function Register() {
     const passwordRef = useRef();
     const confirmPasswordRef = useRef();
 
-    const {setUser, setToken} = useStateContext();
+    const {token, setUser, setToken} = useStateContext();
+
+    if(token) return <Navigate to='/' />
+
 
     function onRegister(e){
         e.preventDefault();

@@ -7,12 +7,13 @@
         
     },
     "auth": {
-        "name": "Full Name",
+        "login": "Login",
+        "logout": "Logout",
+        "register": "Registration",
+        "name": "Username",
         "email": "Email",
         "password": "Password",
         "password_confirmation": "Confirm Password",
-        "login": "Login",
-        "register": "Registration",
         "have_account": "have an account?",
         "dont_have_account": "don't have an account?"
     }
