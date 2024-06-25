@@ -2,7 +2,7 @@ import BodyServices from "../components/BodyServices"
 
 function Services() {
     return (
-        <div className="">
+        <div className="pb-10">
             <BodyServices />
         </div>
     )

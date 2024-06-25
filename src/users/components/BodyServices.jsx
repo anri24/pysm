@@ -24,7 +24,7 @@ function BodyServices() {
             {services.map(item => <BodyServiceItem key={item.id} item={item} />)}
             
         </div>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap justify-start gap-x-8">
             {activeService.serviceDetail?.map(detail => <ServiceDetailItem key={detail.id} detail={detail}  />)}
         </div>
         </div>

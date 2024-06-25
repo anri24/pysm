@@ -8,7 +8,7 @@ function BodyServiceItem({item}) {
     const curLang = i18n.language;
 
     return (
-        <div onClick={() => setActiveService(item)} className={`capitalize cursor-pointer ${activeService.id === item.id ? 'text-green-700': 'text-white'}`}>
+        <div onClick={() => setActiveService(item)} className={`capitalize cursor-pointer ${activeService.id === item.id ? 'text-green-500': 'text-white'}`}>
             {item[`name_${curLang}`]}
         </div>
     )
