@@ -26,7 +26,6 @@ const PaymentComponent = () => {
                 dataId: selectedOrderData.id,
                 orderID,
             }
-            
             // Send orderID to backend for execution
             axiosClient.post('execute-payment', result)
             .then(() => {
@@ -36,22 +35,6 @@ const PaymentComponent = () => {
             }).catch(err => {
                 console.error('Error executing payment:', err);
             })
-            // fetch('http://127.0.0.1:8000/api/execute-payment', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({ orderID }),
-            // })
-            //     .then(response => response.json())
-            //     .then(data => {
-            //         // Handle success response
-            //         console.log('Payment successful:', data);
-            //     })
-            //     .catch(error => {
-            //         // Handle error
-            //         console.error('Error executing payment:', error);
-            //     });
         });
     };
 
